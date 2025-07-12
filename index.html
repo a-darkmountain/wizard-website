@@ -4,22 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arash | Yazdanian</title>
-  
+
   <!-- آیکون تب مرورگر -->
-  <link rel="icon" type="image/png" src="v.svg">
+  <link rel="icon" type="image/png" href="icon.svg">
 
   <!-- فونت‌های فارسی و انگلیسی -->
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- کتابخانه AOS برای انیمیشن هنگام اسکرول -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <!-- فایل استایل خارجی -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- نوار بالای صفحه -->
+  <!-- پس‌زمینه تار و سبک کل سایت -->
+  <div class="background-overlay"></div>
+
+  <!-- هدر سایت -->
   <header>
     <h1>Arash | Yazdanian</h1>
-    <!-- منوی موبایل (همبرگری) -->
+    <!-- آیکون منوی موبایل (همبرگر) -->
     <div class="hamburger" onclick="toggleMenu()">
       <div></div><div></div><div></div>
     </div>
@@ -36,9 +42,11 @@
   </header>
 
   <!-- بخش درباره من -->
-  <section id="about">
-    <img alt="arash photo" src="icon.svg"/>
-    
+  <section id="about" data-aos="fade-up">
+    <!-- تصویر درباره من سمت چپ -->
+    <img class="about-img" src="https://aitechacademy.ir/wp-content/uploads/2024/08/programming-animate.svg" alt="about-image">
+
+    <!-- متن درباره من سمت راست -->
     <div class="about-text">
       <p>سلام من آرش 17 سالمه و عاشق دنیای تکنولوژی و کامپیوتر هستم. من در رشته کامپیوتر تحصیل می‌کنم و به امنیت سایبری خیلی علاقه دارم. من در طراحی سایت، امنیت سایبری و IT تخصص دارم و همیشه دنبال یادگیری بیشتر هستم. عاشق چالش‌های فکری‌ام و همیشه دنبال کشف چیزای جدیدم.</p>
       <hr />
@@ -47,30 +55,33 @@
   </section>
 
   <!-- بخش مهارت‌ها -->
-  <section id="skills">
+  <section id="skills" data-aos="fade-left">
     <h2>مهارت‌ها | Skills</h2>
 
-    <!-- مهارت: امنیت سایبری -->
+    <!-- تصویر سمت چپ کل بخش مهارت‌ها -->
+    <img class="skills-side-img" src="https://aitechacademy.ir/wp-content/uploads/2024/08/pair-programming-animate.svg" alt="skills-image">
+
+    <!-- مهارت امنیت سایبری -->
     <div class="skill">
-      <img src="https://cdn-icons-png.flaticon.com/512/7513/7513984.png" alt="Cybersecurity Icon">
+      <img src="12.png" alt="Cybersecurity Icon">
       <div>
         <h3>امنیت سایبری | Cybersecurity</h3>
         <p class="en">I understand how to secure networks, analyze threats, and protect digital systems from hackers and malware.</p>
       </div>
     </div>
 
-    <!-- مهارت: طراحی سایت -->
+    <!-- مهارت طراحی سایت -->
     <div class="skill">
-      <img src="https://cdn-icons-png.flaticon.com/512/919/919828.png" alt="Web Design Icon">
+      <img src="112.webp" alt="Web Design Icon">
       <div>
         <h3>طراحی سایت | Web Design</h3>
         <p class="en">I design responsive, dark-themed websites with modern UI and smooth interactions using HTML, CSS, and JavaScript.</p>
       </div>
     </div>
 
-    <!-- مهارت: IT -->
+    <!-- مهارت فناوری اطلاعات -->
     <div class="skill">
-      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="IT Icon">
+      <img src="it.png" alt="IT Icon">
       <div>
         <h3>فناوری اطلاعات | IT</h3>
         <p class="en">I have a good understanding of information systems, networks, and how to troubleshoot computer problems efficiently.</p>
@@ -78,14 +89,12 @@
     </div>
   </section>
 
-  <!-- بخش پروژه‌ها -->
-  <section id="projects">
+  <!-- بخش نمونه کارها -->
+  <section id="projects" data-aos="zoom-in">
     <h2>نمونه‌کارها | Projects</h2>
     <p>به‌زودی پروژه‌های من اینجا قرار خواهند گرفت.</p>
-  </section>
-
-  <!-- بخش ارتباط با من -->
-  <section id="contact">
+  </section><!-- بخش ارتباط با من -->
+  <section id="contact" data-aos="fade-up">
     <h2>ارتباط با من | Contact</h2>
     <div class="social-icons">
       <a href="https://t.me/Xll_Badusb_llx" class="icon telegram" target="_blank"></a>
@@ -99,7 +108,11 @@
     <p>تمام حقوق این سایت متعلق به <strong>Arash Yazdanian</strong> است.</p>
   </footer>
 
-  <!-- فایل اسکریپت خارجی -->
+  <!-- اسکریپت‌ها -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js"></script>
+  <script>
+    AOS.init(); // راه‌اندازی انیمیشن‌های AOS
+  </script>
 </body>
 </html>
