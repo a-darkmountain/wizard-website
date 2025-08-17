@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Vazirmatn', sans-serif; /* فونت فارسی */
-  background-color: #e6f0ff; /* رنگ پس‌زمینه آبی روشن */
+  background-color: #000000b9; /* رنگ پس‌زمینه آبی روشن */
   color: #003366; /* رنگ متن اصلی تیره آبی */
   line-height: 1.6;
   position: relative;
@@ -23,10 +23,10 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
-  background-image: url('https://cdn.nody.ir/files/2023/02/22/nody-%D8%A8%DA%A9-%DA%AF%D8%B1%D8%A7%D9%86%D8%AF-%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%84%D8%A8%D8%A7%D8%B3-1677047712.jpg');
+  background-image: url('sayt.jpg');
   background-size: cover;
   background-position: center;
-  filter: blur(6px) brightness(0.7);
+  filter: blur(25px) brightness(0.7);
   z-index: -1;
 }
 
@@ -34,7 +34,7 @@ body {
 header {
   position: sticky;
   top: 0;
-  background-color: rgba(0, 77, 153, 0.314); /* آبی نیمه شفاف */
+  background-color: rgba(0, 0, 0, 0.18); /* آبی نیمه شفاف */
   backdrop-filter: saturate(50%) blur(5px);
   display: flex;
   justify-content: center; /* منو وسط‌چین */
@@ -97,14 +97,15 @@ nav a:hover {
   nav ul {
     display: none;
     flex-direction: column;
-    background-color: rgba(0, 77, 153, 0.85);
+    background-color: rgba(0, 0, 0, 0);
     position: fixed;
     top: 60px;
     left: 20px; /* منو سمت چپ */
     border-radius: 10px;
     padding: 1rem;
-    box-shadow: 0 0 10px #003366cc;
-    width: 200px;
+    box-shadow: 0 0 10px #68acf1cc;
+    width: 500px;
+    height: 500px;
     z-index: 1050;
   }
   nav ul.show {
@@ -145,7 +146,7 @@ section {
 /* متن درباره من سمت راست */
 .about-text {
   max-width: 600px;
-  color: #002244;
+  color: #cce6ff;
   font-size: 1.1rem;
   line-height: 1.7;
 }
@@ -154,16 +155,16 @@ section {
 .en {
   font-family: 'Poppins', sans-serif;
   margin-top: 1rem;
-  color: #004080;
+  color: #cce6ff87;
 }
 
 /* بخش مهارت‌ها */
 #skills {
-  background-color: rgba(0, 77, 153, 0.314);
+  background-color: rgba(0, 0, 0, 0.113);
   border-radius: 20px;
   padding-left: 320px; /* جای کافی برای تصویر سمت چپ */
   position: relative;
-  color: #003366;
+  color: #cce6ff;
   box-shadow: 0 0 15px #99ccff88;
 }
 
@@ -178,7 +179,7 @@ section {
 }
 
 /* عنوان مهارت‌ها */
-#skills h2 {
+#skills h1 {
   margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: 700;
@@ -204,43 +205,11 @@ section {
   max-width: 600px;
 }
 
-/* شبکه‌های اجتماعی */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
-.icon {
-  width: 40px;
-  height: 40px;
-  background-size: cover;
-  display: inline-block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 100px;
-  box-shadow: 0 0 8px transparent;
-}
-
-.icon:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px #3399ff;
-}.telegram {
-  background-image: url('telegram-logo-5.png');
-}
-
-.instagram {
-  background-image: url('icons8-instagram.svg');
-}
-
-.github {
-  background-image: url('github-mark.png');
-}
 
 /* بخش پروژه‌ها */
 #projects {
   text-align: center;
-  color: #002244;
+  color: #cce6ff;
   margin-bottom: 4rem;
 }
 
@@ -252,7 +221,7 @@ section {
 /* بخش تماس */
 #contact {
   text-align: center;
-  color: #002244;
+  color: #cce6ff;
 }
 
 #contact h2 {
@@ -262,7 +231,7 @@ section {
 
 /* فوتر */
 footer {
-  background: rgba(0, 77, 153, 0.314);
+  background: rgba(0, 0, 0, 0);
   color: #cce6ff;
   text-align: center;
   padding: 1rem 0;
@@ -276,7 +245,7 @@ footer {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 77, 153, 0.601);
+  background-color: rgb(0, 77, 153);
   border-radius: 4px;
 }
 
@@ -310,4 +279,54 @@ footer {
   nav ul {
     width: 80vw;
   }
+}
+
+
+
+
+
+
+
+
+
+/* بخش ارتباط با من */
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 2rem;
+}
+
+.contact-card {
+  background: rgba(0, 0, 0, 0.125);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #68adf12a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ .contact-card {
+  display: flex;
+  flex-direction: column; /* متن و آیکون زیر هم بیان */
+  align-items: center;   /* وسط‌چین افقی */
+  justify-content: center; /* وسط‌چین عمودی */
+  text-align: center; /* متن‌ها هم وسط */
+}
+
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #27014775;
+}
+
+.contact-card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #8fc9ff;
+}
+
+.contact-card a {
+  text-decoration: none;
+  color: #cce6ff;
+  font-size: 15px;
 }
